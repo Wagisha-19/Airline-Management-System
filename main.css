@@ -1,0 +1,268 @@
+html,body{
+    padding: 0;
+    margin: 0;
+    background-image: linear-gradient(
+        325deg,
+        hsl(194deg 72% 34%) 0%,
+        hsl(190deg 61% 37%) 15%,
+        hsl(186deg 54% 39%) 26%,
+        hsl(181deg 49% 41%) 35%,
+        hsl(176deg 47% 44%) 43%,
+        hsl(172deg 45% 46%) 49%,
+        hsl(168deg 44% 49%) 55%,
+        hsl(165deg 46% 52%) 60%,
+        hsl(162deg 50% 54%) 64%,
+        hsl(160deg 54% 57%) 68%,
+        hsl(157deg 59% 59%) 72%,
+        hsl(155deg 64% 61%) 75%,
+        hsl(153deg 62% 65%) 78%,
+        hsl(151deg 61% 68%) 80%,
+        hsl(149deg 60% 71%) 82%,
+        hsl(147deg 59% 74%) 84%,
+        hsl(145deg 58% 76%) 86%,
+        hsl(142deg 58% 79%) 88%,
+        hsl(139deg 57% 81%) 90%,
+        hsl(135deg 56% 83%) 92%,
+        hsl(130deg 55% 85%) 93%,
+        hsl(124deg 54% 87%) 96%,
+        hsl(116deg 55% 89%) 100%
+    );
+    background-attachment: fixed;
+}
+
+h1{
+    font-family: 'Lobster', cursive;
+}
+
+h4{
+    font-family: 'Freehand', cursive;
+}
+
+.hrefLinks{
+    margin: 15px;
+    padding: 15px;
+    border: solid;
+    border-radius: 45px;
+    border-width: thin;
+    border-color: transparent;
+    background: #29888c;
+    transition: 250ms;
+}
+
+.hrefLinks :hover{
+    transition: 250ms;
+}
+
+.linksTabs{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.links{
+    text-decoration: none;
+    color: #a8cfd0;
+    transition: 250ms;
+}
+
+.links:hover{
+    color : goldenrod;
+    transition: 250ms;
+}
+
+.hrefLinksHome{
+    margin: 15px;
+}
+
+.ViewContainter{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 20px;
+}
+
+.linksback{
+    text-decoration: none;
+    background: #187795;
+    padding: 12px;
+    margin: 15px;
+    border: none;
+    border-radius: 15px;
+    color: #D4F2D2;
+    transition: 250ms;
+}
+
+.linksback:hover{
+    background: #34113F;
+    color: goldenrod;
+    transition: 250ms;
+}
+
+.tableHeader{
+    text-align: center;
+    font-size: larger;
+    font-family: 'Freehand', cursive;
+}
+
+.studentIntoTable{
+    width: 90%;
+    border-color: #38686A;
+    margin: 30px;
+}
+
+.studentIntoTable thead{
+    padding: 15px;
+}
+
+.studentIntoTable th{
+    padding: 15px;
+    background:#187795;
+    text-align: left;
+    color: #a8cfd0;
+}
+
+.studentIntoTable tr:nth-child(even){background-color: #D4F2D2;}
+
+.studentIntoTable tr:nth-child(even) td{
+    padding: 5px;
+    color: #187795;
+}
+
+.studentIntoTable tr:nth-child(odd){background-color: #187795;}
+
+.studentIntoTable tr:nth-child(odd) td{
+    padding: 5px;
+    color: #D4F2D2;
+}
+
+.deleteContainer{
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+    padding: 15px;
+}
+
+.FormContainer{
+    background: #187795;
+    border: none;
+    border-radius: 40px;
+    padding: 30px;
+    background-image: linear-gradient(
+        135deg,
+        hsl(194deg 72% 34%) 0%,
+        hsl(190deg 61% 37%) 15%,
+        hsl(186deg 54% 39%) 26%,
+        hsl(181deg 49% 41%) 35%,
+        hsl(176deg 47% 44%) 43%,
+        hsl(172deg 45% 46%) 49%,
+        hsl(168deg 44% 49%) 55%,
+        hsl(165deg 46% 52%) 60%,
+        hsl(162deg 50% 54%) 64%,
+        hsl(160deg 54% 57%) 68%,
+        hsl(157deg 59% 59%) 72%,
+        hsl(155deg 64% 61%) 75%,
+        hsl(153deg 62% 65%) 78%,
+        hsl(151deg 61% 68%) 80%,
+        hsl(149deg 60% 71%) 82%,
+        hsl(147deg 59% 74%) 84%,
+        hsl(145deg 58% 76%) 86%,
+        hsl(142deg 58% 79%) 88%,
+        hsl(139deg 57% 81%) 90%,
+        hsl(135deg 56% 83%) 92%,
+        hsl(130deg 55% 85%) 93%,
+        hsl(124deg 54% 87%) 96%,
+        hsl(116deg 55% 89%) 100%
+    );
+    background-attachment: fixed;
+    box-shadow: 2px 2px;
+}
+
+.form_holder{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.formItem{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 5px;
+    padding: 5px;
+}
+
+.formLabel{
+    font-size: large;
+    padding: 2px;
+    align-content: flex-start;
+    text-align: start;
+}
+
+.formInput{
+    border: none;
+    padding: 5px;
+    background: whitesmoke;
+    border-radius: 4px;
+}
+
+.formInput:focus{
+    border:none;
+    background-color: whitesmoke;
+    border-radius: 5px;
+}
+
+.submitBtn{
+    background: #29888c;
+    border: none;
+    padding: 15px;
+    border-radius: 18px;
+    color: #a8cfd0;
+    transition: 250ms;
+}
+
+.submitBtn:hover{
+    background: #34113F;
+    color: goldenrod;
+    transition: 250ms;
+}
+
+.createContainer{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 15px;
+    margin: 15px;
+}
+
+.Container{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid;
+    padding: 20px;
+    margin: 15px;
+    border-color: #34113f78;
+    border-top-left-radius: 50px 30px;
+    border-top-right-radius: 50px 30px;
+    border-bottom-left-radius: 50px 30px;
+    border-bottom-right-radius: 50px 30px;
+}

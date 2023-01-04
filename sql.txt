@@ -1,0 +1,100 @@
+Enter password: *******
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 14
+Server version: 8.0.21 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2020, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> use mini_project;
+Database changed
+mysql> describe mini_project;
+ERROR 1146 (42S02): Table 'mini_project.mini_project' doesn't exist
+mysql> create database airline;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> use airline;
+Database changed
+mysql> create table passenger(passID int primary key auto_increment, passName varchar(50), passEmail varchar(50) , passContact int);
+Query OK, 0 rows affected (0.14 sec)
+
+mysql> create table flight(
+    -> flightID varchar(5) primary key,
+    -> flight_from varchar(4) NOT NULL,
+    -> flight_to varchar(4) NOT NULL,
+    -> flight_time datetime NOT NULL,
+    -> flightCapacity int NOT NULL);
+Query OK, 0 rows affected (0.05 sec)
+
+
+mysql> create table ticket(
+    ->     passID int,
+    ->     flightID varchar(5),
+    ->     price int
+    -> );
+Query OK, 0 rows affected (0.05 sec)
+
+mysql>
+mysql> alter table ticket
+    -> add foreign key (passID) references passenger(passID);
+Query OK, 0 rows affected (0.16 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql>
+mysql> alter table ticket
+    -> add foreign key (flightID) references flight(flightID);
+Query OK, 0 rows affected (0.15 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> insert into flight value("ABCDE" , "Pune", "Mumb", '2022-11-05 14:29:36', 500);
+Query OK, 1 row affected (0.02 sec)
+
+mysql> describe tables;
+ERROR 1146 (42S02): Table 'airline.tables' doesn't exist
+mysql> describe flight;
++----------------+------------+------+-----+---------+-------+
+| Field          | Type       | Null | Key | Default | Extra |
++----------------+------------+------+-----+---------+-------+
+| flightID       | varchar(5) | NO   | PRI | NULL    |       |
+| flight_from    | varchar(4) | NO   |     | NULL    |       |
+| flight_to      | varchar(4) | NO   |     | NULL    |       |
+| flight_time    | datetime   | NO   |     | NULL    |       |
+| flightCapacity | int        | NO   |     | NULL    |       |
++----------------+------------+------+-----+---------+-------+
+5 rows in set (0.02 sec)
+
+mysql> select * from flight;
++----------+-------------+-----------+---------------------+----------------+
+| flightID | flight_from | flight_to | flight_time         | flightCapacity |
++----------+-------------+-----------+---------------------+----------------+
+| ABCDE    | Pune        | Mumb      | 2022-11-05 14:29:36 |            500 |
++----------+-------------+-----------+---------------------+----------------+
+1 row in set (0.00 sec)
+
+mysql> select * from passenger;
++--------+----------+---------------+-------------+
+| passID | passName | passEmail     | passContact |
++--------+----------+---------------+-------------+
+|      1 | reema    | ree@gmail.com |        NULL |
++--------+----------+---------------+-------------+
+
+
+mysql> insert into flight values("NMC", "DEL", "PAT", '2022-11-06 14:29:36', 300);
+Query OK, 1 row affected (0.01 sec)
+mysql> insert into flight values("SRC", "DEL", "CHE", '2022-11-06 17:29:36', 750);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from flight;
++----------+-------------+-----------+---------------------+----------------+
+| flightID | flight_from | flight_to | flight_time         | flightCapacity |
++----------+-------------+-----------+---------------------+----------------+
+| ABCDE    | Pune        | Mumb      | 2022-11-05 14:29:36 |            500 |
+| NMC      | DEL         | PAT       | 2022-11-06 14:29:36 |            300 |
+| SRC      | DEL         | CHE       | 2022-11-06 17:29:36 |            750 |
++----------+-------------+-----------+---------------------+----------------+
+3 rows in set (0.00 sec)

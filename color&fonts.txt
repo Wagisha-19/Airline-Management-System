@@ -1,0 +1,10 @@
+#2589BD - BlueNCS
+#187795 - Teal Blue
+#38686A - Ming
+#D4F2D2 - Nyanza
+#34113F - Russian Violet
+
+FONTS:
+font-family: 'Secular One', sans-serif;
+font-family: 'Lobster', cursive;
+font-family: 'Freehand', cursive;

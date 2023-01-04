@@ -1,0 +1,30 @@
+create database if not exists airline;
+
+use airline;
+
+create table if not exists passenger(
+    passID int primary key auto_increment,
+    passName varchar(50),
+    passEmail varchar(50),
+);
+
+
+create table if not exists flight(
+    flightID varchar(5) primary key,
+    flight_from varchar(4) not null,
+    flight_to varchar(4) not null,
+    flightTimeStamp datetime not null,
+    flightCapacity int not null,
+);
+
+create table ticket(
+    passID int,
+    flightID varchar(5),
+    price int
+);
+
+alter table ticket 
+add foreign key (passID) references passenger(passID);
+
+alter table ticket
+add foreign key (flightID) references flight(flightID);
