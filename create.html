@@ -1,0 +1,41 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+    <title>Airline</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Freehand&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>  
+<body>  
+    
+    <div class="createContainer">
+        <h1>Create Account</h1>
+        
+        <div class="FormContainer">
+            <div>
+                <form action="/savedetails" method='post' class="form_holder"> 
+
+                    <div class="formItem">
+                        <label class="formLabel">User Name: </label>
+                        <input type='text' name="userName" class="formInput"></input>
+                    </div>
+
+                    <div class="formItem">
+                        <label class="formLabel">User Email: </label>
+                        <input type='text' name="userEmail" class="formInput"></input>
+                    </div>
+            
+                    <div class="formItem">
+                        <input type='submit' class="submitBtn" value='Create'></input>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>  
+</html>  

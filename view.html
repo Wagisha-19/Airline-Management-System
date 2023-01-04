@@ -1,0 +1,47 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+    <title>Student Information Website</title> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Freehand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}"> 
+</head>  
+<body> 
+    <div class='ViewContainter'> 
+        <h1>Flight Char Table</h1>
+
+        <div class='studentInfoContainer'>
+            <div class='tableHeader'>Flight</div>
+            <table class='studentIntoTable'>
+                <tr class='studenttablethead'>  
+                    <th class='studenttd'>FlightID</th>  
+                    <th class='studenttd'>flight_from</th>  
+                    <th class='studenttd'>flight_to</th>  
+                    <th class='studenttd'>flightTimeStamp</th>  
+                    <th class='studenttd'>flightCapacity</th>  
+                </tr>  
+
+                {% for row in rows %}  
+        
+                <tr>  
+                    <td class='studentdet'>{{row["flightID"]}}</td>  
+                    <td class='studentdet'>{{row["flight_from"]}}</td>  
+                    <td class='studentdet'>{{row["flight_to"]}}</td>  
+                    <td class='studentdet'>{{row["flightTimeStamp"]}}</td>  
+                    <td class='studentdet'>{{row["flightCapacity"]}}</td>  
+                </tr>  
+            
+                {% endfor %}  
+
+            </table>
+        </div>
+
+        <div class="hrefLinksHome">
+            <a href="/" class="linksback">Back To Home</a>
+        </div>
+    </div>
+</body>  
+</html>  

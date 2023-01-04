@@ -1,0 +1,33 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+    <title>Student Information Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Freehand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">  
+</head>  
+<body>
+    <div class="Container">  
+        <h1>Airline Management</h1>
+
+        <h4> IP_Address Logged In : {{ ipaddress }}</h4>
+
+        <div class="linksTabs">
+            <div class="hrefLinks">
+                <a href="/create-account" class="links">Create Account</a>
+            </div>
+
+            <div class="hrefLinks">
+                <a href="/delete-record" class="links">Book Flight</a>
+            </div>
+
+            <div class="hrefLinks">
+                <a href="/view_all" class="links">View All Flights</a>
+            </div>
+        </div>
+    </div>
+</body>  
+</html>  
